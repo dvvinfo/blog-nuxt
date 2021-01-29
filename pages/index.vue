@@ -1,18 +1,19 @@
 <template>
 <div class="wrapper-content wrapper-content--fixed">
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        blog
-      </h1>
-    </div>
-  </div>
+  <promo/>
+  <intro title="My last posts:"/>
   </div>
 </template>
 
 <script>
-export default {}
+import promo from '@/components/Promo.vue'
+import intro from '@/components/UI/Intro.vue'
+export default {
+  components: {
+    promo,
+    intro
+  }
+}
 </script>
 
 <style>
