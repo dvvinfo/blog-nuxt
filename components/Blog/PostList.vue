@@ -2,7 +2,7 @@
     <section class="post-list">
         <div class="container">
             <div class="posts__wrapper">
-               <postPreview 
+               <postPreview
                v-for="post in posts" :key="post.id"
                :post="post"/>
             </div>
