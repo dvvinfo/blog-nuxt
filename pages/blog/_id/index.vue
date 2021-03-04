@@ -1,22 +1,18 @@
 <template>
     <div class="wrapper-content wrapper-content--fixed">
-        <section class="post">
-            <div class="container">
-                <div class="post-header">
-                    <img :src="post.img" alt="post.title">
-                    <h2 class="title"> {{ post.title }}</h2>
-                    <p>{{ post.descr }}</p>
-                </div>
-                <div class="post-body">
-                    <p>{{ post.content }}</p>
-                </div>
-            </div>
-        </section>
+        <post :post="post"/>
+        <comments :comments="comments"/>
+        <newComment/>
+        
   </div>
 </template>
 
 <script>
+import post from '@/components/Blog/Post.vue'
+import newComment from '@/components/Comments/newComment.vue'
+import comments from '@/components/Comments/Comments.vue'
 export default {
+    components: {post, comments, newComment },
     data () {
         return {
             post: {
@@ -26,7 +22,17 @@ export default {
                 content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 img: 'https://img1.goodfon.ru/original/800x480/8/1f/bugatti-veyron-super-sport-5255.jpg'
 
+                },
+            comments: [
+                {
+                    name: 'Alex',
+                    text: 'Lorem ipsum dolor sit amet'
+                },
+                {
+                    name: 'John',
+                    text: 'Lorem ipsum dolor sit amet'
                 }
+            ]
         }
     }
 }
