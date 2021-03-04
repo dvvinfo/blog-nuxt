@@ -10,14 +10,16 @@
 
                 <!-- buttons -->
                 <div class="controls">
-                    <button class="btn btnPrimary" type="submit">Submit</button>
+                     <AppButton > Submit</AppButton>
                 </div>
             </form>
         </div>
     </section>
 </template>
 <script>
+import AppButton from '@/components/UI/Controls/Button.vue'
 export default {
+    components: { AppButton },
     data () {
         return {
             comment: {
