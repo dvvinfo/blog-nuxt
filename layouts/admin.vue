@@ -1,7 +1,12 @@
 <template>
   <div class="wrapper">
     <Header/>
+    <div class="wrapper-content wrapper-content--fixed">
+    <Intro title="Admin page">
+        <nuxt-link to="/admin" class="link linkWite">Admin</nuxt-link>
+    </Intro>
     <Nuxt />
+    </div>
   </div>
 </template>
 <script>
